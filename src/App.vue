@@ -20,7 +20,7 @@ export default {
     }
   },
   mounted(){
-    let url = 'https://coding.imooc.com/class/ajaxprelearn?'
+    let url = '/api/class/ajaxprelearn?'
     //jsonp请求方式
     jsonp(url,(error,res)=>{
       let result = res;
