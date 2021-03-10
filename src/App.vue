@@ -14,11 +14,17 @@ export default {
   components: {
     HelloWorld
   },
+  data(){
+    return{
+      data:''
+    }
+  },
   mounted(){
     let url = 'https://coding.imooc.com/class/ajaxprelearn?'
     //jsonp请求方式
-    jsonp(url,()=>{
-
+    jsonp(url,(error,res)=>{
+      let result = res;
+      this.data = result;
     }) 
 
     // //axios请求方式
