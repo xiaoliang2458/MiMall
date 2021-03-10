@@ -7,13 +7,29 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
+// import axios from 'axios'  //导入axios插件
+import jsonp from 'jsonp'  //导入jsonp插件
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  mounted(){
+    let url = 'https://coding.imooc.com/class/ajaxprelearn?'
+    //jsonp请求方式
+    jsonp(url,()=>{
+
+    }) 
+
+    // //axios请求方式
+    // axios(url).then(()=>{
+
+    // })
+
   }
+
 }
+
 </script>
 
 <style>
